@@ -279,7 +279,7 @@ section{
 }
 
 
-.img-hero{
+/*.img-hero{
     position: relative;
     animation: floatImage 4s ease-in-out infinite;
     animation-delay: 3s;
@@ -349,6 +349,37 @@ section{
     top: 0;
     left: 50%;
     font-size: 1.2rem;
+}*/
+
+.img-hero {
+    position: relative;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-hero img {
+    width: 90%;
+    border-radius: 50%;
+    border: .2rem solid var(--main-color);
+}
+
+.img-hero .circle-spin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-top: .2rem solid var(--second-bg-color);
+    border-bottom: .2rem solid var(--second-bg-color);
+    border-left: .2rem solid var(--main-color);
+    border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 /* ==================== About section css code ============================ */
