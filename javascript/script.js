@@ -14,7 +14,15 @@ navlist.addEventListener("click",()=>{
     document.body.classList.remove("open");
 })
 
-
+// <!-- typed js effect starts -->
+var typed = new Typed(".typing-text", {
+    strings: ["frontend development", "backend development", "graphic designing", "web development"],
+    loop: true,
+    typeSpeed: 80,
+    backSpeed: 40,
+    backDelay: 500,
+});
+// <!-- typed js effect ends -->
 
 // rotate text js code 
 let text = document.querySelector(".text p");
