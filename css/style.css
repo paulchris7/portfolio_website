@@ -143,7 +143,7 @@ section{
 
 .hero-info{
     margin-top: 3rem;
-    width:50rem;
+    width:56rem;
 }
 
 .hero-info h3{
@@ -353,9 +353,15 @@ section{
 }*/
 
 .img-hero {
-    position: relative;
     width: 40rem;
-    height: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img-hero .img-hero-container{
+    position: relative;
+    width: 30rem;
+    height: 30rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -364,6 +370,8 @@ section{
 
 .img-hero img {
     width: 90%;
+    height: 90%;
+    object-fit: cover;
     border-radius: 50%;
     border: .2rem solid var(--main-color);
 }
