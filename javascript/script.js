@@ -14,14 +14,15 @@ navlist.addEventListener("click",()=>{
     document.body.classList.remove("open");
 })
 
-// typed js effect
-var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "graphic designing", "web development"],
-    loop: true,
-    typeSpeed: 80,
-    backSpeed: 40,
-    backDelay: 500,
-});
+
+
+// rotate text js code 
+let text = document.querySelector(".text p");
+
+text.innerHTML = text.innerHTML.split("").map((char,i)=>
+    `<b style="transform:rotate(${i * 6.3}deg")>${char}</b>`
+).join("");
+
 
 // switch between about buttons 
 

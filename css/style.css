@@ -9,20 +9,25 @@
 }
 
 :root{
-    --bg-color: #081b29;
-    --second-bg-color: #112e42;
-    --font-color: #ededed;
-    --main-color: #00abf0;                                                          
+    --bg-color:#e3edf7;
+    --gradient-white-bg:linear-gradient(0deg,#fff 0%,#edf4fa 51%,#e5eef7 100%);
+    --gradient-color-bg:linear-gradient(180deg,rgba(247,1,120,1)0%,
+                                                rgba(160,8,156,1)51%,
+                                                rgba(99,13,178,1)100%);
+    --main-color:#e6006d;
+    --font-color:#90979f;
+    --hover-box-shadow:rgba(0,0,0,0.19)0px 10px 20px,
+                       rgba(0,0,0,0.23)0px 6px 6px;     
+    --gradient-white-bg2:linear-gradient(98deg,#e5eef7 0%,#fff 100%);                                                          
 }
 
 a{
     text-decoration: none;
-    color: var(--font-color);
+    color: #000;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
-    color: var(--font-color);
     background: var(--bg-color);
     overflow-x: hidden;
 }
@@ -30,14 +35,13 @@ body{
 header{
     padding: 15px 8%;
     width: 100%;
-    height: 10%;
     position: fixed;
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: var(--bg-color);
+    background: var(--gradient-white-bg);
     z-index: 100;
     transition: .3s;
 }
@@ -48,8 +52,9 @@ header .logo{
 }
 
 span{
+    background: var(--gradient-color-bg);
     -webkit-background-clip: text;
-    color: var(--main-color);
+    color: transparent;
 }
 
 ul.navlist{
@@ -66,8 +71,9 @@ ul.navlist{
 }
 
 .navlist li a:hover,.navlist li a.active{
+    background: var(--gradient-color-bg);
     -webkit-background-clip: text;
-    color: var(--main-color);
+    color: transparent;
 }
 
 .right-header{
@@ -78,64 +84,16 @@ ul.navlist{
 }
 
 .btn{
-    background: var(--main-color);
-    color:var(--bg-color);
-    border: .15rem solid var(--main-color);
+    background: var(--gradient-color-bg);
+    color: #fff;
     padding: 8px 10px;
     border-radius: 5px;
     font-weight: 500;
-    transition: .5s;
+    transition: all .3s ease;
 }
 
-.btn:hover{
-    color: var(--main-color);
-}
-
-.button-link { 
-    display: inline-block;
-    background: var(--main-color);
-    padding: 8px 17px;
-    border-radius: 5px;
-    border: .15rem solid var(--main-color);
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--bg-color);
-    margin-right: .5rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-.button-link:hover{
-    color: var(--main-color);
-    background: transparent;
-}
-
-.button-link.active{
-    background: transparent;
-    color: var(--font-color);
-}
-
-button { 
-    background: var(--main-color);
-    padding: 8px 17px;
-    border-radius: 5px;
-    border: .15rem solid var(--main-color);
-    font-size: 1rem;
-    font-weight: 500;
-    color: var(--bg-color);
-    margin-right: .5rem;
-    cursor: pointer;
-    transition: .5s;
-}
-
-button:hover{
-    color: var(--main-color);
-    background: transparent;
-}
-
-button.active{
-    background: transparent;
-    color: var(--font-color);
+.btn:hover,.btn-box .d-CV:hover{
+    box-shadow: var(--hover-box-shadow);
 }
 
 .menu-icon{
@@ -175,7 +133,7 @@ button.active{
 
 /* ==================== home section css code ============================ */
 section{
-    padding: 50px 8%;
+    padding: 90px 8%;
 }
 
 .home{
@@ -186,7 +144,7 @@ section{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     grid-gap: 4em;
-    background: var(--bg-color);
+    background: var(--gradient-white-bg2);
 }
 
 .hero-info{
@@ -204,6 +162,40 @@ section{
     font-size: 3.5rem;
 }
 
+.text-animate{
+    width: 22.8rem;
+    position: relative;
+}
+
+.text-animate h2{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: transparent;
+    -webkit-text-stroke: 0.1vw #770753;
+    background: var(--gradient-color-bg);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    transition: .6s;
+    letter-spacing: 2px;
+    animation: moveText 3s linear infinite;
+    animation-delay: 2s;
+}
+
+.text-animate h2::before{
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: -3px;
+    width: 0;
+    height: 70%;
+    border-right: 2px solid var(--main-color);
+    animation: moveCursorText 3s linear infinite;
+    animation-delay: 2s;
+}
+
+
 .hero-info p{
     font-size: .9rem;
     color: var(--font-color);
@@ -212,153 +204,155 @@ section{
 
 .btn-box{
     display: flex;
-    width: 500px;
+    justify-content: space-between;
+    width: 320px;
     margin-top: 2rem;
     margin-bottom: 6rem;
-    gap: 15px;
 }
 
 .btn-box .btn{
-    position: relative;
-    display: inline-flex;
-    justify-content: center;
+    padding: 10px;
+    display: flex;
     align-items: center;
-    width: 10rem;
-    height: 100%;
-    background: var(--main-color);
-    border: .15rem solid var(--main-color);
-    border-radius: .8rem;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.btn-box .d-CV{
+    background: var(--gradient-white-bg2);
+    padding: 10px;
+    border-radius: 5px;
     font-weight: 500;
-    color: var(--bg-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
+    color: #000;
+    box-shadow: rgba(60,64,67,0.3)0px 1px 2px 0,
+                  rgba(60,64,67,0.15)0px 2px 6px 2px;
+    transition: all .3s ease;              
 }
 
-.btn-box .btn:hover {
-    color: var(--main-color);
-}
-
-.btn-box .btn:nth-child(2) {
-    background: transparent;
-    color: var(--main-color);
-}
-
-.btn-box .btn:nth-child(2):hover {
-    color: var(--bg-color);
-}
-
-.btn-box .btn:nth-child(2)::before {
-    background: var(--main-color);
-}
-
-.btn-box .btn::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn-box .btn:hover::before {
-    width: 100%;
-}
-
-.social-media {
+.social-media{
     display: flex;
     justify-content: space-between;
     width: 220px;
     height: 45px;
 }
 
-.social-media a {
-    position: relative;
+.social-media a{
+    width: 42px;
+    height: 42px;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    background: #fff;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
-    background: transparent;
-    border: .15rem solid var(--main-color);
+    transition: .4s;
     border-radius: 50%;
-    font-size: 20px;
-    color: var(--main-color);
     z-index: 1;
-    overflow: hidden;
-    transition: .5s;
 }
 
-.social-media a:hover {
-    color: var(--bg-color);
+
+.social-media a:hover{
+    background: var(--gradient-color-bg);
+    color: #fff;
 }
 
-.social-media a::before {
-    content: '';
+.bg-icon{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-icon span{
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: var(--main-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.social-media a:hover::before {
-    width: 100%;
+    width: 50px;
+    height: 50px;
+    background: var(--gradient-color-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: animate 1s linear infinite;
 }
 
 .img-hero{
     position: relative;
-}
-
-.img-hero .img-hero-container{
-    position: relative;
-    width: 30rem;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    animation: floatImage 4s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
 .img-hero img{
-    width: 90%;
-    height: 90%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: .2rem solid var(--main-color)
+    position: relative;
+    width: 400px;
+    height: auto;
+    z-index: 10;
 }
 
-.img-hero .circle-spin {
+.rotate-text{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(0);
-    width: 100%;
-    height: 100%;
+    top: 4%;
+    left: -53px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.rotate-text span{
+    position: relative;
+    width: 442px;
+    height: 442px;
+    background: red;
+    border: 6px solid #eaeef0;
     border-radius: 50%;
-    border-top: .2rem solid var(--second-bg-color);
-    border-bottom: .2rem solid var(--second-bg-color);
-    border-left: .2rem solid var(--main-color);
-    border-right: .2rem solid var(--main-color);
-    animation: aboutSpinner 8s linear infinite;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.rotate-text span::before{
+    content: "";
+    position: absolute;
+    inset: 20px;
+    background: #00aaff;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.rotate-text span i{
+    position: absolute;
+    inset: 0;
+    background: var(--gradient-color-bg);
+    filter: blur(5px);
+    animation: animate 2s linear infinite;
+}
+
+
+.rotate-text .text{
+    position: absolute;
+    width: 490px;
+    height: 490px;
+    background: #f2f6fb;
+    border-radius: 50%;
+    box-shadow: 0 1px 6px 5.94px rgba(0,0,0,0.2);
+    animation: rotateText 30s linear infinite;
+}
+
+.text b{
+    position: absolute;
+    transform-origin: 0 247px;
+    display: block;
+    top: 0;
+    left: 50%;
+    font-size: 1.2rem;
 }
 
 /* ==================== About section css code ============================ */
 .about{
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
     display: flex;
-    grid-template-columns: repeat(2,1fr);
+    justify-content: space-between;
     align-items: center;
-    grid-gap: 4em;
-    background: var(--second-bg-color);
+    gap: 1rem;
 }
 
 .about .about-img{
@@ -369,6 +363,19 @@ section{
     width: 40vw;
     height: auto;
 }
+
+.about-img .ring{
+    position: absolute;
+    top: 22%;
+    right: 1%;
+}
+
+.about-img .circle{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+
 
 .about-content{
     padding: 3rem 0;
@@ -397,6 +404,27 @@ section{
     margin: .8rem 0;
 }
 
+.about-btn button,.cvContent a{
+    background: var(--gradient-white-bg2);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #000;
+    box-shadow: rgba(60,64,67,0.3)0px 1px 2px 0,
+                  rgba(60,64,67,0.15)0px 2px 6px 2px;
+    margin-right: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+
+.about-btn button.active{
+    background: var(--gradient-color-bg);
+    color: #ffff;
+}
+
 .text-box{
     margin: .8rem 0;
 }
@@ -405,27 +433,23 @@ section{
     display: none;
 }
 
+.about-btn button:hover{
+    box-shadow: var(--hover-box-shadow);
+}
+
 .cvContent{
     margin-top: 1.5rem;
 }
 
 /* ==================== Services section css code ============================ */
 .services{
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    grid-gap: 4em;
-    background: var(--bg-color);
+    position: relative;
 }
 
 .main-text{
     width: 100%;
     text-align: center;
-    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .main-text .heading{
@@ -452,7 +476,7 @@ section{
                   rgba(0,0,0,0.06)0px 1px 2px 0px;
     padding: 2rem 1rem;
     border-radius: 10px;
-    background: var(--second-bg-color);
+    background: var(--gradient-white-bg2);
     text-align: center;
 }
 
@@ -466,10 +490,10 @@ section{
                   rgba(0,0,0,0.06)0px 1px 2px 0px;
     padding: .5rem;
     border-radius: 50%;
-    background: var(--main-color);
+    background: var(--gradient-color-bg);
     width: 70px;
     height: 70px;
-    color: var(--bg-color);
+    color: #fff;
     font-size: 2.5rem;
     display: inline-flex;
     justify-content: center;
@@ -555,11 +579,73 @@ section{
     padding: 10px 20px;
 }
 
+
+.services .showcase .ring{
+    width: 100px;
+    height: auto;
+    position: absolute;
+    top: 2%;
+    left: -3%;
+}
+
+.services .showcase .circle{
+    position: absolute;
+    width: 70px;
+    height: auto;
+    top: 2%;
+    right: 6%;
+    filter: blur(3px);
+}
+
+.services .showcase .circle2{
+    position: absolute;
+    width: 40px;
+    height: auto;
+    filter: blur(3px);
+}
+
+.services .showcase .circle3{
+    position: absolute;
+    width: 70px;
+    height: auto;
+    filter: blur(3px);
+    bottom: 36%;
+    left: 22%;
+}
+
+.services .showcase .half-ring{
+    position: absolute;
+    width: 120px;
+    height: auto;
+    bottom: 4%;
+    right: 6%;
+}
+
+
 /* ==================== Services section css code ============================ */
 .fillter-buttons{
     text-align: center;
     padding: .5rem;
     margin-bottom: 2rem;
+}
+
+.fillter-buttons button{
+    background: var(--gradient-white-bg2);
+    padding: 12px 15px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    color: #000;
+    box-shadow: rgba(60,64,67,0.3)0px 1px 2px 0,
+    rgba(60,64,67,0.15)0px 2px 6px 2px;
+    margin-right: .5rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.fillter-buttons button:hover,button.mixitup-control-active{
+    background: var(--gradient-color-bg);
+    color: #fff;
 }
 
 .portfolio-gallery{
@@ -681,8 +767,35 @@ section{
     height: 10px !important;
     width: 30px !important;
     border-radius: 25px !important;
-    background: var(--main-color) !important;
+    background: var(--gradient-color-bg) !important;
 }
+
+.blog .showcase img{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+}
+
+.blog .showcase .circle{
+    filter: blur(3px);
+}
+
+.blog .showcase .ring{
+    top: 0;
+    left: -1%;
+}
+
+.blog .showcase .half-ring{
+    top: 10%;
+    right: 10%;
+}
+
+.blog .showcase .second-circle{
+    top: 30%;
+    left: 2%;
+    filter: blur(1px);
+}
+
 
 /* ==================== Contact section css code ============================ */
 
@@ -690,15 +803,12 @@ section{
     display: flex;
     justify-content: space-between;
     gap: 2rem;
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
-    background: var(--bg-color);
 }
 
-.contact-info{
+.contact-info,.skills{
     width: 100%;
-    background: var(--second-bg-color);
+    background: var(--gradient-white-bg2);
+    box-shadow: rgba(0,0,0,0.18)0px 2px 4px;
     padding: 1rem;
     border-radius: 10px;
 }
@@ -713,18 +823,12 @@ section{
 .contact-info form textarea{
     /* width: 100%; */
     padding: .8rem;
+    border: 2px solid #e8e1e1;
     margin: .5rem 0;
-    background-color: var(--bg-color);
-    box-shadow: rgba(0,0,0,0.18)0px 2px 4px;
-    border: 2px solide var(--main-color);
+    background: #e8f1f9;
     border-radius: 5px;
     outline: none;
     transition: .3s;
-}
-
-.contact-info form input::placeholder,
-.contact-info form textarea::placeholder{
-    color: var(--main-color);
 }
 
 .contact-info form .input-box{
@@ -739,23 +843,20 @@ section{
 form input:focus,form textarea:focus{
     filter: brightness(100%);
     background: #d2e9ff;
+    border: 2px solid #f8caca;
 }
 
 form textarea{
     resize: none;
 }
 
-contact img{
-    width: 50rem;
+form .btn{
+    padding: 15px 20px;
+    cursor: pointer;
+    border: none;
 }
 
 /* ==================== Skills section css code ============================ */
-.skills{
-    width: 100%;
-    background: var(--second-bg-color);
-    padding: 1rem;
-    border-radius: 10px;
-}
 
 .skillBox{
     padding: 0 1rem 1rem;
@@ -957,15 +1058,10 @@ footer{
     }
 }
 
-@keyframes aboutSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
 
 
 
-/*======================= BreakPoints ============================ */
+/*======================= BrakPoints ============================ */
 
 @media(max-width:1200px){
     html{
@@ -1071,7 +1167,7 @@ footer{
     .rotate-text{
         display: none;
     }
-    .img-hero .img-hero-container{
+    .img-hero img{
         width: 100%;
     }
     .text-animate{
