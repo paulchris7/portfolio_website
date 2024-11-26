@@ -170,7 +170,7 @@ section{
     display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
-    grid-gap: 4em;
+    grid-gap: 2em;
     background: var(--bg-color);
 }
 
@@ -950,9 +950,6 @@ footer{
     }
     .btn{
         padding: 10px;
-    }
-    .home{
-        grid-gap: 0;
     }
     .fillter-buttons button{
         padding: 10px;
