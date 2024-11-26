@@ -333,11 +333,28 @@ section{
 
 /* ==================== About section css code ============================ */
 .about{
-    width: 100vw;
+    /*width: 100vw;
     display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
+    background: var(--second-bg-color);*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    grid-gap: 4em;
     background: var(--second-bg-color);
+}
+
+.about-all {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px , auto));
+    align-items: center;
+    gap: 2rem;
+    position: relative;
+    z-index: 1;
 }
 
 .about .about-img{
