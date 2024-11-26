@@ -357,9 +357,10 @@ section{
 
 .img-hero .img-hero-container{
     position: relative;
-    width: 30rem;
-    height: 30rem;
-    border-radius: 50%;
+    width: 30rem; /* Let it scale responsively */
+    /*max-width: 30rem;*/
+    aspect-ratio: 1 / 1; /* Maintain a 1:1 ratio for the circle */
+    border-radius: 50%; /* Ensures the container is circular */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1237,9 +1238,9 @@ footer{
     .rotate-text{
         display: none;
     }
-    /*.img-hero .img-hero-container{
+    .img-hero .img-hero-container{
         width: 100%;
-    }*/
+    }
     .text-animate{
         width: 23.8rem;
     }
