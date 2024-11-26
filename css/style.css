@@ -935,7 +935,7 @@ footer{
         width: 100%;
         text-align: center;
         display: block;
-        background: var(--gradient-white-bg);
+        background: var(--bg-color);
         left: 0;
         border-top: 2px solid rgba(248, 202, 202, .7);
     }
