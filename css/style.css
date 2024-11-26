@@ -1237,9 +1237,9 @@ footer{
     .rotate-text{
         display: none;
     }
-    .img-hero img{
+    /*.img-hero .img-hero-container{
         width: 100%;
-    }
+    }*/
     .text-animate{
         width: 23.8rem;
     }
