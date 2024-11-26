@@ -189,8 +189,8 @@ section{
     font-size: 3.5rem;
 }
 
-.hero-info p{
-    font-size: .9rem;
+.hero-info .text-animate h2{
+    font-size: 1.5rem;
     color: var(--font-color);
     line-height: 1.5rem;
 }
@@ -257,7 +257,7 @@ section{
 .social-media {
     display: flex;
     justify-content: space-between;
-    width: 220px;
+    width: 150px;
     height: 45px;
 }
 
