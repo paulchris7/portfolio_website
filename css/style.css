@@ -848,7 +848,7 @@ footer{
     display: none;
     place-items: center;
     border-radius: 50%;
-    color: #1d002c;
+    color: var(--main-colorco);
     cursor: pointer;
     box-shadow: rgba(50,50,93,0.25)0px 50px 100px -20px,
     rgba(0,0,0,0.3)0px 30px 60px -30px,
@@ -860,9 +860,9 @@ footer{
     display: grid;
     height: calc(100% - 12px);
     width: calc(100% - 12px);
-    background: var(--gradient-color-bg);
+    background: var(--bg-color);
     border-radius: 50%;
-    color: #fff;
+    color: var(--main-color);
     place-items: center;
     font-size: 25px;
 }
