@@ -179,9 +179,8 @@ section{
 }
 
 .home{
-    /*min-height: 100vh;*/
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh ;
     display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
@@ -354,7 +353,6 @@ section{
 
 /* ==================== About section css code ============================ */
 .about{
-    height: 100vh;
     width: 100vw;
     display: flex;
     grid-template-columns: repeat(2,1fr);
@@ -412,7 +410,6 @@ section{
 
 /* ==================== Services section css code ============================ */
 .services{
-    min-height: 100vh;
     height: 100%;
     width: 100%;
     display: flex;
@@ -904,8 +901,9 @@ footer{
     }
     .about,.contactSkills{
         flex-direction: column;
+        justify-content: center;
     }
-    .about .about-img .aboutHero{
+    .about .img-hero .img-hero-container{
         width: 100%;
     }
     .proposal img{
@@ -990,7 +988,7 @@ footer{
         width: 100%;
     }
     .img-hero .img-hero-container{
-        width: 80%;
+        width: 75%;
     }
     .hero-info{
         height: 50%;
