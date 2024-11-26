@@ -903,7 +903,7 @@ footer{
         flex-direction: column;
         justify-content: center;
     }
-    .about .img-hero .img-hero-container{
+    .about{
         width: 100%;
     }
     .proposal img{
