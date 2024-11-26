@@ -354,9 +354,8 @@ section{
 
 /* ==================== About section css code ============================ */
 .about{
-    min-height: 100vh;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
@@ -374,7 +373,7 @@ section{
 }
 
 .about-content{
-    padding: 3rem 0;
+    padding: 1rem 0;
 }
 
 .about-content h2{
