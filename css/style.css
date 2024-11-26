@@ -181,6 +181,7 @@ section{
 .home{
     /*min-height: 100vh;*/
     width: 100vw;
+    height: 100vh ;
     display: flex;
     grid-template-columns: repeat(2,1fr);
     align-items: center;
@@ -428,6 +429,7 @@ section{
     width: 100%;
     text-align: center;
     margin-top: 2rem;
+    padding-top: 2rem;
 }
 
 .main-text .heading{
@@ -990,8 +992,7 @@ footer{
         width: 100%;
     }
     .img-hero .img-hero-container{
-        width: 50%;
-        height: 50%;
+        width: 80%;
     }
     .hero-info{
         height: 50%;
