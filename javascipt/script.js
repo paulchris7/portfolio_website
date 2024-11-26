@@ -14,15 +14,14 @@ navlist.addEventListener("click",()=>{
     document.body.classList.remove("open");
 })
 
-
-
-// rotate text js code 
-let text = document.querySelector(".text p");
-
-text.innerHTML = text.innerHTML.split("").map((char,i)=>
-    `<b style="transform:rotate(${i * 6.3}deg")>${char}</b>`
-).join("");
-
+// typed js effect
+var typed = new Typed(".typing-text", {
+    strings: ["frontend development", "backend development", "graphic designing", "web development"],
+    loop: true,
+    typeSpeed: 80,
+    backSpeed: 40,
+    backDelay: 500,
+});
 
 // switch between about buttons 
 
@@ -184,4 +183,3 @@ ScrollReveal().reveal('.hero-info,.main-text,.proposal,.heading', { origin: "top
 ScrollReveal().reveal('.about-img,.fillter-buttons,.contact-info', { origin: "left" });
 ScrollReveal().reveal('.about-content,.skills', { origin: "right" });
 ScrollReveal().reveal('.allServices,.portfolio-gallery,.blog-box,footer,.img-hero', { origin: "bottom" });
-

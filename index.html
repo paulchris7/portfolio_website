@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pars Coder || Portfolio website</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Paul Christopher Aime || Portfolio Website</title>
+    <link rel="stylesheet" href="css/style.css">
     <!-- boxicon css link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <!-- Link Swiper's CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
+
 <body>
     <div class="overlay"></div>
+
     <header>
-        <a href="#" class="logo"><span>R</span>ichi</a>
+        <a href="#" class="logo"><span>C</span>hris</a>
         <ul class="navlist">
             <li><a href="#home" class="active">Home</a></li>
             <li><a href="#about">About</a></li>
@@ -23,7 +25,9 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="right-header">
-            <a href="#" class="btn">Let's chat <i class='bx bx-message-dots' ></i></a>
+            <a href="#" class="button-link">
+                Let's chat <i class='bx bx-message-dots' ></i>
+            </a>
             <div class="menu-icon">
                 <div class="bar"></div>
             </div>
@@ -33,69 +37,53 @@
     <section class="home" id="home">
         <div class="hero-info">
             <h3>Welcome To my World</h3>
-            <h1>Hi I'm Richard</h1>
+            <h1>Hi I'm Christopher</h1>
 
             <div class="text-animate">
-                <h2>Frontend Developer</h2>
+                <h2>I am into <span class="typing-text"></span></h2>
             </div>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi rerum cupiditate delectus ullam voluptates accusamus sapiente minima deleniti cum amet.</p>
 
             <div class="btn-box">
                 <a href="mailto:richard@mail.com" class="btn">Hire Me Now ! <i class='bx bx-right-arrow-alt' ></i></a>
-                <a href="img/resume.pdf" target="_blank" class="btn d-CV">Download CV <i class='bx bx-download'></i></a>
+                <a href="img/resume.pdf" target="_blank" class="btn">Download CV <i class='bx bx-download'></i></a>
             </div>
 
             <div class="social-media">
-                <div class="bg-icon">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <span></span>
-                </div>
-
-                <div class="bg-icon">
-                    <a href="#"><i class='bx bxl-github'></i></a>
-                    <span></span>
-                </div>
-
-                <div class="bg-icon">
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <span></span>
-                </div>
-
-                <div class="bg-icon">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <span></span>
-                </div>
+                <a href="#"><i class='bx bxl-facebook'></i></a>
+                <a href="#"><i class='bx bxl-twitter'></i></a>
+                <a href="#"><i class='bx bxl-linkedin'></i></a>
             </div>
         </div>
+
         <div class="img-hero">
-            <img src="img/hero.png" alt="">
-            <div class="rotate-text">
-                <div class="text">
-                    <p>I'm Youtuber And I'm Frontend Developer And I'm Designer</p>
-                </div>
-                <span><i></i></span>
+            <div class="img-hero-container">
+                <img src="img/hero-img.jpg" alt="This is a picture of me">
+                <span class="circle-spin"></span>
             </div>
         </div>
     </section>
 
     <section class="about" id="about">
-        <div class="about-img">
-            <img src="img/aboutMe.png" alt="" class="aboutHero">
-            <div class="showcase-ring">
-                <img src="shapes/ring.png" class="ring">
-                <img src="shapes/circle.png" class="circle">
+        <div class="img-hero">
+            <div class="img-hero-container">
+                <img src="img/about-me.jpg" alt="This is a picture of me">
+                <span class="circle-spin"></span>
             </div>
         </div>
+
         <div class="about-content">
             <h2 class="heading">About Me</h2>
-            <h3>3 Year's Experience on Product Design</h3>
+            <h3>Aspiring Full-Stack Developer</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint voluptatem autem ex in. Temporibus et maiores ipsum recusandae voluptas consequatur!</p>
+
             <div class="about-btn">
                 <button class="active">Main Skills</button>
                 <button>Awards</button>
                 <button>Education</button>
             </div>
+
             <div class="content-btn">
                 <div class="content">
                     <div class="text-box">
@@ -144,7 +132,9 @@
                 </div>
             </div>
             <div class="cvContent">
-                <a href="img/resume.pdf" target="_blank" class="btn d-CV">Download CV <i class='bx bx-download'></i></a>
+                <a href="img/resume.pdf" target="_blank" class="button-link">
+                    Download CV <i class='bx bx-download'></i>
+                </a>
             </div>
         </div>
     </section>
@@ -163,7 +153,7 @@
                 </div>
                 <h3>App Development</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure inventore ea nemo ab recusandae modi voluptates maxime ipsam eveniet. Facilis.</p>
-                <a href="#" class="readMore">Read More</a>
+                <a href="#" class="button-link">Read More</a>
             </div>
 
             <div class="servicesItem">
@@ -173,7 +163,7 @@
                 </div>
                 <h3>Web Development</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure inventore ea nemo ab recusandae modi voluptates maxime ipsam eveniet. Facilis.</p>
-                <a href="#" class="readMore">Read More</a>
+                <a href="#" class="button-link">Read More</a>
             </div>
 
             <div class="servicesItem">
@@ -183,7 +173,7 @@
                 </div>
                 <h3>UI / UX Design</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure inventore ea nemo ab recusandae modi voluptates maxime ipsam eveniet. Facilis.</p>
-                <a href="#" class="readMore">Read More</a>
+                <a href="#" class="button-link">Read More</a>
             </div>
 
             <div class="servicesItem">
@@ -193,25 +183,121 @@
                 </div>
                 <h3>Digital Marketing</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure inventore ea nemo ab recusandae modi voluptates maxime ipsam eveniet. Facilis.</p>
-                <a href="#" class="readMore">Read More</a>
+                <a href="#" class="button-link">Read More</a>
             </div>
         </div>
+
+        <div class="skills">
+            <div class="container">
+                <div class="skillBox">
+                    <div class="main-text">
+                        <h2 class="heading">My Skills</h2>
+                        <span>Let Me Help you</span>
+                    </div>
+                    <div class="skill-wrap">
+                        <div class="skill">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                        <defs>
+                                            <linearGradient id="GradientColor">
+                                                <stop offset="0%" stop-color="#e91e63" />
+                                                <stop offset="100%" stop-color="#673ab7" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
+                                    </svg>
+                                    <h2 class="counter">
+                                        <span data-target="89">0</span>%
+                                    </h2>
+                                </div>
+                            </div>
+
+                            <div class="sk-title">
+                                HTML
+                            </div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                        <defs>
+                                            <linearGradient id="GradientColor">
+                                                <stop offset="0%" stop-color="#e91e63" />
+                                                <stop offset="100%" stop-color="#673ab7" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
+                                   </svg>
+                                   <h2 class="counter">
+                                        <span data-target="47">0</span>%
+                                   </h2>
+                                </div>
+                            </div>
+                            <div class="sk-title">
+                                CSS
+                            </div>
+                        </div>
+
+
+                        <div class="skill">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                        <defs>
+                                            <linearGradient id="GradientColor">
+                                                <stop offset="0%" stop-color="#e91e63" />
+                                                <stop offset="100%" stop-color="#673ab7" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
+                                   </svg>
+                                   <h2 class="counter">
+                                        <span data-target="56">0</span>%
+                                       </h2>
+                                </div>
+                            </div>
+                            <div class="sk-title">
+                                JavaScript
+                            </div>
+                        </div>
+
+
+                        <div class="skill">
+                            <div class="outer-circle">
+                                <div class="inner-circle">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
+                                        <defs>
+                                            <linearGradient id="GradientColor">
+                                                <stop offset="0%" stop-color="#e91e63" />
+                                                <stop offset="100%" stop-color="#673ab7" />
+                                            </linearGradient>
+                                        </defs>
+                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
+                                   </svg>
+                                   <h2 class="counter">
+                                        <span data-target="19">0</span>%
+                                   </h2>
+                                </div>
+                            </div>
+                            <div class="sk-title">
+                                UI/UX Design
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
         <div class="proposal">
             <div class="text-box">
                 <span>Get It Touch</span>
                 <h3>Have a Project On Your Mind</h3>
-                <a href="#contact" class="btn">Contact Me</a>
+                <a href="#contact" class="button-link">Contact Me</a>
             </div>
             <img src="img/support.png" class="first">
-        </div>
-
-        <div class="showcase">
-            <img src="shapes/ring.png" class="ring">
-            <img src="shapes/circle.png" class="circle">
-            <img src="shapes/circle.png" class="circle2">
-            <img src="shapes/circle.png" class="circle3">
-            <img src="shapes/half-ring.png" class="half-ring">
         </div>
     </section>
 
@@ -221,10 +307,10 @@
             <span>what i will do for you</span>
         </div>
         <div class="fillter-buttons">
-            <button class="button mixitup-control-active" data-filter="all">All Work</button>
-            <button class="button" data-filter=".web">Web Development</button>
-            <button class="button" data-filter=".uiux">UI/UX Design</button>
-            <button class="button" data-filter=".branding">Branding Design</button>
+            <button class="button-link mixitup-control-active" data-filter="all">All Work</button>
+            <button class="button-link" data-filter=".web">Web Development</button>
+            <button class="button-link" data-filter=".uiux">UI/UX Design</button>
+            <button class="button-link" data-filter=".branding">Branding Design</button>
         </div>
 
         <div class="portfolio-gallery">
@@ -232,7 +318,7 @@
                 <div class="portfolio-content">
                     <h3>UI/UX Design</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="readMore">Explore More</a>
+                    <a href="#" class="button-link">Explore More</a>
                 </div>
                 <div class="portfolio-img">
                     <img src="img/portfolio/1.jpg" alt="">
@@ -243,7 +329,7 @@
                 <div class="portfolio-content">
                     <h3>Web Design</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="readMore">Explore More</a>
+                    <a href="#" class="button-link">Explore More</a>
                 </div>
                 <div class="portfolio-img">
                     <img src="img/portfolio/2.jpg" alt="">
@@ -254,7 +340,7 @@
                 <div class="portfolio-content">
                     <h3>Web Development</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="readMore">Explore More</a>
+                    <a href="#" class="button-link">Explore More</a>
                 </div>
                 <div class="portfolio-img">
                     <img src="img/portfolio/3.jpg" alt="">
@@ -266,7 +352,7 @@
                 <div class="portfolio-content">
                     <h3>Web Development</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="readMore">Explore More</a>
+                    <a href="#" class="button-link">Explore More</a>
                 </div>
                 <div class="portfolio-img">
                     <img src="img/portfolio/4.jpg" alt="">
@@ -277,7 +363,7 @@
                 <div class="portfolio-content">
                     <h3>UI/UX Design</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="readMore">Explore More</a>
+                    <a href="#" class="button-link">Explore More</a>
                 </div>
                 <div class="portfolio-img">
                     <img src="img/portfolio/5.jpg" alt="">
@@ -288,7 +374,7 @@
                 <div class="portfolio-content">
                     <h3>Web Development</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="readMore">Explore More</a>
+                    <a href="#" class="button-link">Explore More</a>
                 </div>
                 <div class="portfolio-img">
                     <img src="img/portfolio/6.jpg" alt="">
@@ -316,7 +402,7 @@
                         <p class="excerpt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illo.
                         </p>
-                        <a href="#" class="readMore">Explore More</a>
+                        <a href="#" class="button-link">Explore More</a>
                     </div>
                 </div>
 
@@ -330,7 +416,7 @@
                         <p class="excerpt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illo.
                         </p>
-                        <a href="#" class="readMore">Explore More</a>
+                        <a href="#" class="button-link">Explore More</a>
                     </div>
                 </div>
 
@@ -344,7 +430,7 @@
                         <p class="excerpt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illo.
                         </p>
-                        <a href="#" class="readMore">Explore More</a>
+                        <a href="#" class="button-link">Explore More</a>
                     </div>
                 </div>
 
@@ -358,7 +444,7 @@
                         <p class="excerpt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illo.
                         </p>
-                        <a href="#" class="readMore">Explore More</a>
+                        <a href="#" class="button-link">Explore More</a>
                     </div>
                 </div>
 
@@ -372,7 +458,7 @@
                         <p class="excerpt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illo.
                         </p>
-                        <a href="#" class="readMore">Explore More</a>
+                        <a href="#" class="button-link">Explore More</a>
                     </div>
                 </div>
 
@@ -386,7 +472,7 @@
                         <p class="excerpt">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, illo.
                         </p>
-                        <a href="#" class="readMore">Explore More</a>
+                        <a href="#" class="button-link">Explore More</a>
                     </div>
                 </div>
 
@@ -394,18 +480,10 @@
         </div>
 
         <div class="swiper-pagination"></div>
-
-        <div class="showcase">
-            <img src="shapes/ring.png" class="ring">
-            <img src="shapes/second-circle.png" class="second-circle">
-            <img src="shapes/circle.png" class="circle">
-            <img src="shapes/half-ring.png" class="half-ring">
-        </div>
-
     </section>
 
     <section class="down-box" id="contact">
-        <div class="contactSkills">
+        <div class="contact">
             <div class="contact-info">
                 <div class="main-text">
                     <h2 class="heading">Contact Me</h2>
@@ -421,116 +499,17 @@
                     <textarea name="#" id="" cols="30" rows="10">
                     </textarea>
                     <div class="formBtn">
-                        <button type="submit" class="btn">Send Message</button>
+                        <button type="submit" class="button-link">Send Message</button>
                     </div>
                 </form>
             </div>
-            <div class="skills">
-                <div class="container">
-                    <div class="skillBox">
-                        <div class="main-text">
-                            <h2 class="heading">My Skills</h2>
-                            <span>Let Me Help you</span>
-                        </div>
-                        <div class="skill-wrap">
-                            <div class="skill">
-                                <div class="outer-circle">
-                                    <div class="inner-circle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                            <defs>
-                                                <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                                </linearGradient>
-                                            </defs>
-                                                <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                       </svg>
-                                       <h2 class="counter">
-                                        <span data-target="89">0</span>%
-                                       </h2>
-                                    </div>
-                                </div>
-                                <div class="sk-title">
-                                    HTML
-                                </div>
-                            </div>
-
-                            <div class="skill">
-                                <div class="outer-circle">
-                                    <div class="inner-circle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                            <defs>
-                                                <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                                </linearGradient>
-                                            </defs>
-                                                <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                       </svg>
-                                       <h2 class="counter">
-                                        <span data-target="47">0</span>%
-                                       </h2>
-                                    </div>
-                                </div>
-                                <div class="sk-title">
-                                    CSS
-                                </div>
-                            </div>
-
-
-                            <div class="skill">
-                                <div class="outer-circle">
-                                    <div class="inner-circle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                            <defs>
-                                                <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                                </linearGradient>
-                                            </defs>
-                                                <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                       </svg>
-                                       <h2 class="counter">
-                                        <span data-target="56">0</span>%
-                                       </h2>
-                                    </div>
-                                </div>
-                                <div class="sk-title">
-                                    JavaScript
-                                </div>
-                            </div>
-
-
-                            <div class="skill">
-                                <div class="outer-circle">
-                                    <div class="inner-circle">
-                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                            <defs>
-                                                <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                                </linearGradient>
-                                            </defs>
-                                                <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                       </svg>
-                                       <h2 class="counter">
-                                        <span data-target="19">0</span>%
-                                       </h2>
-                                    </div>
-                                </div>
-                                <div class="sk-title">
-                                    UI/UX Design
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+            <img src="img/support.png" class="contact-img">
         </div>
     </section>
 
     <footer>
-        <p>Copyright © 2023 by <span>Pars Coder</span> || All Right Reservd.</p>
+        <p>Copyright © 2024 by <span>Paul Christopher Aime</span> || All Right Reservd.</p>
     </footer>
 
     <div id="progress">
@@ -543,8 +522,10 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Swiper JS -->
      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+     <!-- typed.js cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- mixitup cdn js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"></script>
-    <script src="script.js"></script>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
