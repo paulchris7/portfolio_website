@@ -333,11 +333,6 @@ section{
 
 /* ==================== About section css code ============================ */
 .about{
-    /*width: 100vw;
-    display: flex;
-    grid-template-columns: repeat(2,1fr);
-    align-items: center;
-    background: var(--second-bg-color);*/
     height: 100%;
     width: 100%;
     display: flex;
@@ -420,7 +415,7 @@ section{
 .main-text{
     width: 100%;
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding-top: 2rem;
 }
 
