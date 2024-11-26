@@ -345,7 +345,7 @@ section{
     grid-template-columns: repeat(2,1fr);
     align-items: center;
     grid-gap: 4em;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .about-all {
