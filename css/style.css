@@ -180,7 +180,6 @@ section{
 
 .home{
     /*min-height: 100vh;*/
-    height: 100vh;
     width: 100vw;
     display: flex;
     grid-template-columns: repeat(2,1fr);
@@ -854,7 +853,7 @@ footer{
     /* background: #194eb9; */
     z-index: 1000;
     bottom: 60px;
-    right: 10px;
+    right: 25px;
     width: 50px;
     height: 50px;
     display: none;
@@ -879,94 +878,13 @@ footer{
     font-size: 25px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*======================= @keyframes ============================ */
-
-@keyframes moveText{
-    0%,10%,100%{
-        background-position: -24rem 0;
-    }
-
-    65%,85%{
-        background-position: 0rem 0;
-    }
-}
-
-@keyframes moveCursorText{
-    0%,10%,100%{
-        width: 0;
-    }
-
-    65%,78%,85%{
-        width: 100%;
-        opacity: 1;
-    }
-
-    75%,85%{
-        opacity: 0;
-    }
-}
-
-@keyframes animate{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotateText{
-    0%{
-        transform: rotate(360deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
 
 @keyframes progress{
    to{
     stroke-dashoffset: var(--target);
    }
 }
-
-@keyframes floatImage{
-    0%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-22px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-
-@keyframes aboutSpinner {
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-
 
 /*======================= BreakPoints ============================ */
 
@@ -1071,20 +989,21 @@ footer{
     .input-box input {
         width: 100%;
     }
-    .rotate-text{
-        display: none;
-    }
     .img-hero .img-hero-container{
-        width: 70%;
+        width: 50%;
+        height: 50%;
     }
-    .text-animate{
-        width: 23.8rem;
+    .hero-info{
+        height: 50%;
     }
     .btn-box{
         width: 266px;
         margin-bottom: 3rem;
     }
     .about-btn button{
+        padding: 10px 15px;
+    }
+    button{
         padding: 10px 15px;
     }
     .fillter-buttons{
