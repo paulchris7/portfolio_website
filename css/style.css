@@ -336,7 +336,7 @@ section{
     border: .2rem solid var(--main-color)
 }
 
-.img-hero .circle-spin {
+.img-hero .img-hero-container .circle-spin {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -348,7 +348,7 @@ section{
     border-bottom: .2rem solid var(--second-bg-color);
     border-left: .2rem solid var(--main-color);
     border-right: .2rem solid var(--main-color);
-    animation: aboutSpinner 8s linear infinite;
+    animation: aboutSpinner 20s linear infinite;
 }
 
 /* ==================== About section css code ============================ */
@@ -881,6 +881,12 @@ footer{
    to{
     stroke-dashoffset: var(--target);
    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
 }
 
 /*======================= BreakPoints ============================ */
