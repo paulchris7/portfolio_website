@@ -24,7 +24,6 @@ var typed = new Typed(".typing-text", {
 });
 
 // switch between about buttons 
-
 const buttons = document.querySelectorAll('.about-btn button');
 const contents = document.querySelectorAll('.content');
 
@@ -40,6 +39,13 @@ buttons.forEach((button, index) => {
 
 
 // portfolio fillter 
+const buttons2 = document.querySelectorAll('.fillter-buttons button');
+buttons2.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      buttons2.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+    });
+});
 
 var mixer = mixitup('.portfolio-gallery',{
     selectors: {
@@ -52,7 +58,6 @@ var mixer = mixitup('.portfolio-gallery',{
 
 
 // Initialize swiperjs 
-
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
