@@ -850,6 +850,7 @@ contact img{
 .skill-icon:hover figcaption {
     color: #00abf0;
 }
+
 @media (max-width: 600px) {
     .skills-icons-grid {
         gap: 1.2rem;
