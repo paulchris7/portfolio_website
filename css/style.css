@@ -32,7 +32,7 @@ header{
     width: 100vw;
     height: 10vh;
     position: fixed;
-    top: 20px;
+    top: 0;
     left: 0;
     display: flex;
     align-items: center;
@@ -307,7 +307,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 .img-hero img{
@@ -1030,6 +1030,7 @@ footer{
     header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
+        margin-top: 3%;
     }
     .home,.portfolio-box{
         flex-direction: column-reverse;
