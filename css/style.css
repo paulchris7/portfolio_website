@@ -1017,6 +1017,15 @@ footer{
 }
 
 /*======================= BreakPoints ============================ */
+@media (min-width: 1300px) {
+    header {
+        padding-top: 2rem;
+        height: auto;
+    }
+    .home {
+        margin-top: 3rem;
+    }
+}
 
 @media(max-width:1200px){
     html{
