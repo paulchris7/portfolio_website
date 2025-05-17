@@ -32,7 +32,7 @@ header{
     width: 100vw;
     height: 10vh;
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 0;
     display: flex;
     align-items: center;
@@ -172,6 +172,7 @@ section{
     align-items: center;
     grid-gap: 2em;
     background: var(--bg-color);
+
 }
 
 .hero-info{
@@ -306,6 +307,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 5rem;
 }
 
 .img-hero img{
