@@ -255,70 +255,80 @@
         </div>
 
         <div class="portfolio-gallery">
-            <div class="portfolio-box mix uiux">
-                <div class="portfolio-content">
-                    <h3>UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="button-link">Explore More</a>
-                </div>
-                <div class="portfolio-img">
-                    <img src="img/portfolio/1.jpg" alt="">
-                </div>
-            </div>
-
             <div class="portfolio-box mix web">
                 <div class="portfolio-content">
-                    <h3>Web Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="button-link">Explore More</a>
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A responsive and animated personal website to showcase my projects, skills, and contact information.</p>
+                    <a href="#" class="button-link open-modal"
+                    data-title="Personal Portfolio Website"
+                    data-desc="A responsive and animated personal website to showcase my projects, skills, and contact information. Includes a dark/light mode toggle, animated counters, a project modal, and a Swiper.js gallery."
+                    data-stack="HTML, CSS, JAVASCRIPT"
+                    data-images="img\portfolio\web_dev\port_web_site\home.png, img\portfolio\web_dev\port_web_site\portfolio.png, img\portfolio\web_dev\port_web_site\services.png"
+                    data-link="https://github.com/paulchris7">Explore More</a>
+                    
                 </div>
                 <div class="portfolio-img">
-                    <img src="img/portfolio/2.jpg" alt="">
+                    <img src="img\portfolio\web_dev\port_web_site\home.png" alt="personal portfolio website preview">
                 </div>
             </div>
 
             <div class="portfolio-box mix web">
                 <div class="portfolio-content">
                     <h3>Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="button-link">Explore More</a>
+                    <p>Dynamic website with backend integration.</p>
+                    <a href="#" class="button-link open-modal"
+                    data-title="Web Development"
+                    data-desc="Dynamic website with backend integration."
+                    data-stack="PHP, JavaScript, MySQL"
+                    data-link="https://example.com/webdev1">Explore More</a>
                 </div>
                 <div class="portfolio-img">
-                    <img src="img/portfolio/3.jpg" alt="">
+                    <img src="img/portfolio/3.jpg" alt="Web development preview">
                 </div>
             </div>
-
 
             <div class="portfolio-box mix web">
                 <div class="portfolio-content">
                     <h3>Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="button-link">Explore More</a>
+                    <p>Portfolio website with dark/light mode and animations.</p>
+                    <a href="#" class="button-link open-modal"
+                    data-title="Portfolio Website"
+                    data-desc="Portfolio website with dark/light mode and animations."
+                    data-stack="HTML, CSS, JS"
+                    data-link="https://github.com/yourname/portfolio">Explore More</a>
                 </div>
                 <div class="portfolio-img">
-                    <img src="img/portfolio/4.jpg" alt="">
+                    <img src="img/portfolio/4.jpg" alt="Portfolio preview">
                 </div>
             </div>
 
             <div class="portfolio-box mix uiux">
                 <div class="portfolio-content">
                     <h3>UI/UX Design</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="button-link">Explore More</a>
+                    <p>Wireframes and prototyping for client dashboard.</p>
+                    <a href="#" class="button-link open-modal"
+                    data-title="Dashboard UI"
+                    data-desc="Wireframes and prototyping for client dashboard."
+                    data-stack="Figma"
+                    data-link="https://example.com/dashboard">Explore More</a>
                 </div>
                 <div class="portfolio-img">
-                    <img src="img/portfolio/5.jpg" alt="">
+                    <img src="img/portfolio/5.jpg" alt="Dashboard design preview">
                 </div>
             </div>
 
             <div class="portfolio-box mix branding">
                 <div class="portfolio-content">
-                    <h3>Web Development</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, soluta.</p>
-                    <a href="#" class="button-link">Explore More</a>
+                    <h3>Branding Design</h3>
+                    <p>Visual identity and logo design for a startup.</p>
+                    <a href="#" class="button-link open-modal"
+                    data-title="Branding Project"
+                    data-desc="Visual identity and logo design for a startup."
+                    data-stack="Illustrator, Figma"
+                    data-link="https://example.com/branding">Explore More</a>
                 </div>
                 <div class="portfolio-img">
-                    <img src="img/portfolio/6.jpg" alt="">
+                    <img src="img/portfolio/6.jpg" alt="Branding project preview">
                 </div>
             </div>
         </div>
@@ -457,10 +467,43 @@
         </span>
     </div>
 
+    <dialog id="project-modal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">&times;</button>
+
+            <div class="modal-header">
+                <h2 id="modal-title">Project Title</h2>
+            </div>
+
+            <!-- Swiper Gallery -->
+            <div class="swiper modal-swiper">
+                <div class="swiper-wrapper" id="modal-swiper-wrapper">
+                    <!-- Slides will be injected via JS -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <div class="modal-body">
+            <p id="modal-desc">Description of the project.</p>
+
+            <div class="modal-stack">
+                <strong>Tech Stack:</strong>
+                <div id="modal-icons" class="stack-icons"></div>
+            </div>
+
+            <a id="modal-link" href="#" target="_blank" rel="noopener">🔗 View Project</a>
+            </div>
+        </div>
+    </dialog>
+
+
+
     <!-- scroll reveal  -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- Swiper JS -->
-     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
      <!-- typed.js cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.5/typed.min.js" integrity="sha512-1KbKusm/hAtkX5FScVR5G36wodIMnVd/aP04af06iyQTkD17szAMGNmxfNH+tEuFp3Og/P5G32L1qEC47CZbUQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- mixitup cdn js -->

@@ -101,6 +101,105 @@ var mixer = mixitup('.portfolio-gallery',{
     }
 });
 
+// modal portfolio window
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('project-modal');
+  const modalTitle = document.getElementById('modal-title');
+  const modalDesc = document.getElementById('modal-desc');
+  const modalLink = document.getElementById('modal-link');
+  const modalIcons = document.getElementById('modal-icons'); // Pour les icônes de stack
+  const closeBtn = document.querySelector('.modal-close');
+  const openButtons = document.querySelectorAll('.open-modal');
+
+  // Fonction pour charger les images dans Swiper
+  let swiperInstance = null;
+  function loadGallery(images = []) {
+    const wrapper = document.getElementById('modal-swiper-wrapper');
+    wrapper.innerHTML = ''; // reset
+
+    images.forEach(src => {
+      const slide = document.createElement('div');
+      slide.className = 'swiper-slide';
+      slide.innerHTML = `<img src="${src}" alt="Project preview">`;
+      wrapper.appendChild(slide);
+    });
+
+    if (swiperInstance) swiperInstance.destroy(true, true);
+    swiperInstance = new Swiper('.modal-swiper', {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  }
+
+  // Fonction pour afficher les icônes devicon
+  const iconMap = {
+    html: 'devicon-html5-plain',
+    css: 'devicon-css3-plain',
+    javascript: 'devicon-javascript-plain',
+    php: 'devicon-php-plain',
+    mysql: 'devicon-mysql-plain',
+    react: 'devicon-react-original',
+    flutter: 'devicon-flutter-plain',
+    dart: 'devicon-dart-plain',
+    nodejs: 'devicon-nodejs-plain',
+    figma: 'devicon-figma-plain',
+    python: 'devicon-python-plain',
+    'c++': 'devicon-cplusplus-plain'
+  };
+
+  openButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+
+      modalTitle.textContent = btn.dataset.title;
+      modalDesc.textContent = btn.dataset.desc;
+      modalLink.href = btn.dataset.link;
+
+      const images = btn.dataset.images?.split(',') || [];
+      loadGallery(images);
+
+      // Injecte les icônes devicon
+      modalIcons.innerHTML = '';
+      const stack = btn.dataset.stack?.split(',') || [];
+      stack.forEach(tech => {
+        const key = tech.trim().toLowerCase();
+        const iconClass = iconMap[key];
+        if (iconClass) {
+          const icon = document.createElement('i');
+          icon.className = iconClass;
+          icon.title = key;
+          modalIcons.appendChild(icon);
+        }
+      });
+
+      modal.showModal();
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  // Fermeture modale
+  const closeModal = () => {
+    modal.close();
+    document.body.style.overflow = '';
+  };
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', e => {
+    if (e.target === modal) closeModal();
+  });
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeModal();
+  });
+});
+
 
 // Initialize swiperjs 
 var swiper = new Swiper(".mySwiper", {
