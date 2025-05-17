@@ -1030,7 +1030,9 @@ footer{
     header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
-        margin-top: 3%;
+    }
+    header{
+        top: 3%;
     }
     .home,.portfolio-box{
         flex-direction: column-reverse;
