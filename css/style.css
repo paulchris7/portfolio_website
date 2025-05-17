@@ -610,7 +610,7 @@ section{
     gap: .5rem;
     padding: .5rem;
     box-shadow: rgba(0,0,0,0.18)0px 2px 4px;
-    background: var(--gradient-white-bg2);
+    background: var(--second-bg-color);
     border-radius: 10px;
     transition: all .3s ease;
 }
@@ -776,7 +776,7 @@ section{
 }
 
 .card{
-    background: var(--gradient-white-bg2);
+    background: var(--second-bg-color);
     box-shadow: rgba(0,0,0,0.18)0px 2px 4px;
     padding: 1rem;
     border-radius: 10px;
