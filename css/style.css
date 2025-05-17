@@ -673,8 +673,8 @@ section{
   max-width: 100vw;     /* pour éviter débordement sur iOS */
   max-height: 100vh;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px); /* Safari iOS */
+  backdrop-filter: blur(6px);
   overflow: hidden;
   margin: 0;
   padding: 0;
