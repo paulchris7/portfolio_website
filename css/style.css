@@ -1149,9 +1149,6 @@ footer{
     .about{
         width: 100%;
     }
-    .proposal img{
-        width: 52vw;
-    }
     .portfolio-img img{
         width: 100%;
         height: 100%;
@@ -1165,9 +1162,6 @@ footer{
 }
 
 @media(max-width:768px){
-    .proposal{
-        display: none;
-    }
     .menu-icon .bar,.menu-icon::after,.menu-icon::before{
         display: block;
     }
