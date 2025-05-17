@@ -31,7 +31,8 @@ header{
     padding: 15px 8%;
     width: 100vw;
     height: 10vh;
-    margin-top: 10px;
+    position: fixed;
+    top: 0;
     left: 0;
     display: flex;
     align-items: center;
@@ -1021,18 +1022,12 @@ footer{
     html{
         font-size: 95%;
     }
-    header{
-        margin-top: 40px;
-    }
 }
 
 @media(max-width:991px){
     header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
-    }
-    header{
-        margin-top: 30px;
     }
     .home,.portfolio-box{
         flex-direction: column-reverse;
@@ -1060,9 +1055,6 @@ footer{
 }
 
 @media(max-width:768px){
-    header{
-        margin-top: 20px;
-    }
     .proposal{
         display: none;
     }
