@@ -126,16 +126,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (swiperInstance) swiperInstance.destroy(true, true);
     swiperInstance = new Swiper('.modal-swiper', {
-      loop: true,
-      spaceBetween: 10,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.modal-swiper .swiper-button-next', // scoped inside modal
+            prevEl: '.modal-swiper .swiper-button-prev',
+        },
+        pagination: {
+            el: '.modal-swiper .swiper-pagination',
+            clickable: true,
+        },
     });
   }
 
@@ -201,30 +201,35 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// Initialize swiperjs 
-var swiper = new Swiper(".mySwiper", {
+document.addEventListener('DOMContentLoaded', () => {
+  const blogSwiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination",
+      el: ".blog-pagination",
       clickable: true,
     },
-    autoplay:{
-        delay:3000,
-        disableOnInteraction:false,
+    navigation: {
+      nextEl: ".blog-next",
+      prevEl: ".blog-prev",
     },
-
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     breakpoints: {
-        576:{
-            slidesPerView:2,
-            spaceBetween:10,
-        },
-        1200:{
-            slidesPerView:3,
-            spaceBetween:20,
-        },
-    }
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 10,
+      },
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      },
+    },
   });
+});
+
 
 // side progress bar 
 let calcScrollValue = ()=>{
