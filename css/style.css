@@ -25,6 +25,7 @@ body{
     color: var(--font-color);
     background: var(--bg-color);
     overflow-x: hidden;
+    margin-top: 3px;
 }
 
 header{
@@ -306,7 +307,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1%;
 }
 
 .img-hero img{
@@ -1023,15 +1024,23 @@ footer{
     html{
         font-size: 95%;
     }
+    header{
+       height: 15px;
+       margin-top: 3rem;
+    }
 }
 
 @media(max-width:991px){
+    body{
+        margin-top: 20px;
+    }
     header,section,footer{
         padding-left: 3%;
         padding-right: 3%;
     }
     header{
-        top: 3%;
+        height: 10px;
+        margin-top: 3rem;
     }
     .home,.portfolio-box{
         flex-direction: column-reverse;
