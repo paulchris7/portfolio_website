@@ -16,7 +16,7 @@ navlist.addEventListener("click",()=>{
 
 // typed js effect
 var typed = new Typed(".typing-text", {
-    strings: ["frontend development", "backend development", "graphic designing", "web development"],
+    strings: ["Web Development", "Software Development", "UI/UX Design", "Graphic Design"],
     loop: true,
     typeSpeed: 80,
     backSpeed: 40,

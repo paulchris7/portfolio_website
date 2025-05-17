@@ -2,15 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Christopher Aime || Portfolio Website</title>
+    <meta name="description" content="Portfolio website of Paul Christopher Aime, Full-Stack Developer. Showcasing projects, skills, and contact information.">
+    <meta name="keywords" content="Portfolio, Web Developer, Full-Stack, Projects, Skills, Contact, Paul Christopher Aime">
+    <meta name="author" content="Paul Christopher Aime">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <!-- boxicon css link -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- devicon -->
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Devicon CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-    <!-- Link Swiper's CSS -->
+    <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google Fonts Example -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -27,9 +37,6 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="right-header">
-            <a href="#" class="button-link">
-                Let's chat <i class='bx bx-message-dots' ></i>
-            </a>
             <div class="menu-icon">
                 <div class="bar"></div>
             </div>
@@ -58,12 +65,13 @@
 
         <div class="img-hero">
             <div class="img-hero-container">
-                <img src="img/hero-img.jpg" alt="This is me">
+                <img src="assets/img/hero-img.jpg" alt="This is me">
                 <span class="circle-spin"></span>
             </div>
         </div>
     </section>
 
+    <!-- About section -->
     <section class="about" id="about">
         <div class="main-text">
             <h2 class="heading">About Me</h2>
@@ -74,11 +82,11 @@
             <div class="about-stats">
                 <div class="stats">
                     <div class="stat-item">
-                        <span class="count" data-target="10">0</span>
+                        <span class="count" data-target="7">0</span>
                         <p>Projects Completed</p>
                     </div>
                     <div class="stat-item">
-                        <span class="count" data-target="10">0</span>
+                        <span class="count" data-target="3">0</span>
                         <p>Deployments</p>
                     </div>
                     <div class="stat-item">
@@ -86,7 +94,7 @@
                         <p>Years of Experience</p>
                     </div>
                     <div class="stat-item">
-                        <span class="count" data-target="5">0</span>
+                        <span class="count" data-target="3">0</span>
                         <p>Certifications</p>
                     </div>
                 </div>
@@ -103,6 +111,7 @@
                 </div>
 
                 <div class="content-btn">
+                    <!-- Education Section -->
                     <div class="content">
                         <div class="text-box">
                             <p>B.Eng, Computer Engineering</p>
@@ -110,13 +119,19 @@
                         </div>
                     </div>
 
+                    <!-- Experience Section -->
                     <div class="content">
+                        <div class="text-box">
+                            <p>Internship at InternPE - Jan 2025</p>
+                            <span>Designed and developed full-stack web applications with responsive front-end interfaces, efficient PHP/MySQL back-end services, real-time API integrations, and collaborative version control using Git/GitHub.</span>
+                        </div>
                         <div class="text-box">
                             <p>Freelance Web Developer - 2023 to present</p>
                             <span>Creating tailored, responsive websites with optimized, clean code to boost startups' online visibility</span>
                         </div>
                     </div>
 
+                    <!-- Certifications Section -->
                     <div class="content">
                         <div class="text-box">
                             <p>Front-End Development Professionnal Certificate</p>
@@ -129,6 +144,7 @@
                     </div>
                 </div>
 
+                <!-- Download CV Button -->
                 <div class="cvContent">
                     <a href="assets/docs/chris_cv_en.pdf" target="_blank" class="button-link" download title="Download my CV">
                         Download CV <i class='bx bx-download' aria-hidden="true"></i>
@@ -147,7 +163,7 @@
         <div class="allServices">
             <div class="servicesItem">
                 <div class="icon-services">
-                    <i class='bx bx-code-alt' ></i>
+                    <i class='bx bx-desktop' ></i>
                     <span></span>
                 </div>
                 <h3>Web Development</h3>
@@ -156,7 +172,16 @@
 
             <div class="servicesItem">
                 <div class="icon-services">
-                    <i class='bx bx-desktop' ></i>
+                    <i class='bx bx-mobile'></i>
+                    <span></span>
+                </div>
+                <h3>Mobile Development</h3>
+                <p>Design and build cross-platform mobile apps with intuitive interfaces, real-time features, and seamless performance on both Android and iOS devices.</p>
+            </div>
+
+            <div class="servicesItem">
+                <div class="icon-services">
+                    <i class='bx bx-layout' ></i>
                     <span></span>
                 </div>
                 <h3>UI / UX Design</h3>
@@ -165,7 +190,7 @@
 
             <div class="servicesItem">
                 <div class="icon-services">
-                    <i class='bx bxs-party' ></i>
+                    <i class='bx bxs-palette' ></i>
                     <span></span>
                 </div>
                 <h3>Graphic Design</h3>
