@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- boxicon css link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- devicon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
@@ -44,13 +46,13 @@
 
             <div class="btn-box">
                 <a href="#portfolio" class="sliding-button">See works ! <i class='bx bx-right-arrow-alt' ></i></a>
-                <a href="#" target="_blank" class="sliding-button">Download CV <i class='bx bx-download'></i></a>
+                <a href="assets\docs\chris_cv_en.pdf" target="_blank" class="sliding-button">Download CV <i class='bx bx-download'></i></a>
             </div>
 
             <div class="social-media">
-                <a href="https://www.facebook.com/paulchristaime"><i class='bx bxl-facebook'></i></a>
-                <a href="https://github.com/paulchris7"><i class='bx bxl-github'></i></a>
-                <a href="https://www.linkedin.com/in/paulchristopheraime"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://www.facebook.com/paulchristaime" title="Facebook Profile"><i class='bx bxl-facebook'></i></a>
+                <a href="https://github.com/paulchris7" title="GitHub Profile"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/paulchristopheraime" title="LinkedIn Profile"><i class='bx bxl-linkedin'></i></a>
             </div>
         </div>
 
@@ -69,10 +71,24 @@
         </div>
 
         <div class="about-all">
-            <div class="img-hero">
-                <div class="img-hero-container">
-                    <img src="img/about-me.jpg" alt="This is me">
-                    <span class="circle-spin"></span>
+            <div class="about-stats">
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="count" data-target="10">0</span>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="count" data-target="10">0</span>
+                        <p>Deployments</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="count" data-target="3">0</span>
+                        <p>Years of Experience</p>
+                    </div>
+                    <div class="stat-item">
+                        <span class="count" data-target="5">0</span>
+                        <p>Certifications</p>
+                    </div>
                 </div>
             </div>
 
@@ -92,14 +108,6 @@
                             <p>B.Eng, Computer Engineering</p>
                             <span>Marrakesh's National School of Applied Sciences - 2027</span>
                         </div>
-                        <!--<div class="text-box">
-                            <p>Web & User Interface Design - Development</p>
-                            <span>Website , Web Experience , ...</span>
-                        </div>
-                        <div class="text-box">
-                            <p>Interaction Desing - Animation</p>
-                            <span>I Like to move it move it</span>
-                        </div>-->
                     </div>
 
                     <div class="content">
@@ -107,16 +115,7 @@
                             <p>Freelance Web Developer - 2023 to present</p>
                             <span>Creating tailored, responsive websites with optimized, clean code to boost startups' online visibility</span>
                         </div>
-                        <!--<div class="text-box">
-                            <p>Code and Development Award</p>
-                            <span>Exceptional coding skills and develoment techniques</span>
-                        </div>
-                        <div class="text-box">
-                            <p>Hackathons and coding Competiotions</p>
-                            <span>Participating in hackathons and coding.</span>
-                        </div>-->
                     </div>
-
 
                     <div class="content">
                         <div class="text-box">
@@ -127,15 +126,12 @@
                             <p>Fundamentals of Web Developement</p>
                             <span>Illinois Tech via Coursera - 2024</span>
                         </div>
-                        <!--<div class="text-box">
-                            <p>Bachelor's Degree in Computer Science</p>
-                            <span>I Like to move it move it</span>
-                        </div>-->
                     </div>
                 </div>
+
                 <div class="cvContent">
-                    <a href="#" target="_blank" class="button-link">
-                        Download CV <i class='bx bx-download'></i>
+                    <a href="assets/docs/chris_cv_en.pdf" target="_blank" class="button-link" download title="Download my CV">
+                        Download CV <i class='bx bx-download' aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -149,16 +145,6 @@
         </div>
 
         <div class="allServices">
-            <!--<div class="servicesItem">
-                <div class="icon-services">
-                    <i class='bx bx-layer' ></i>
-                    <span></span>
-                </div>
-                <h3>App Development</h3>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure inventore ea nemo ab recusandae modi voluptates maxime ipsam eveniet. Facilis.</p>
-                <a href="#" class="button-link">Read More</a>
-            </div>-->
-
             <div class="servicesItem">
                 <div class="icon-services">
                     <i class='bx bx-code-alt' ></i>
@@ -166,7 +152,6 @@
                 </div>
                 <h3>Web Development</h3>
                 <p>Build responsive and functional websites tailored to your needs, ensuring a seamless experience across all devices</p>
-                <!--<a href="#" class="button-link">Read More</a>-->
             </div>
 
             <div class="servicesItem">
@@ -176,7 +161,6 @@
                 </div>
                 <h3>UI / UX Design</h3>
                 <p>Design intuitive and user-focused interfaces that prioritize aesthetics and functionality for an engaging digital experience</p>
-                <!--<a href="#" class="button-link">Read More</a>-->
             </div>
 
             <div class="servicesItem">
@@ -186,10 +170,10 @@
                 </div>
                 <h3>Graphic Design</h3>
                 <p>Create stunning visuals that bring your ideas to life, from branding to custom designs that make a lasting impact</p>
-                <!--<a href="#" class="button-link">Read More</a>-->
             </div>
         </div>
 
+        <!-- Skills Section with Technology Icons -->
         <div class="skills">
             <div class="container">
                 <div class="skillBox">
@@ -197,108 +181,73 @@
                         <h2 class="heading">My Skills</h2>
                         <span>what powers my work</span>
                     </div>
-                    <div class="skill-wrap">
-                        <div class="skill">
-                            <div class="outer-circle">
-                                <div class="inner-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                        <defs>
-                                            <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#081b29" />
-                                                <stop offset="100%" stop-color="#00abf0" />
-                                            </linearGradient>
-                                        </defs>
-                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                    </svg>
-                                    <h2 class="counter">
-                                        <span data-target="89">0</span>%
-                                    </h2>
-                                </div>
-                            </div>
-
-                            <div class="sk-title">
-                                HTML
-                            </div>
-                        </div>
-
-                        <div class="skill">
-                            <div class="outer-circle">
-                                <div class="inner-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                        <defs>
-                                            <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                            </linearGradient>
-                                        </defs>
-                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                   </svg>
-                                   <h2 class="counter">
-                                        <span data-target="47">0</span>%
-                                   </h2>
-                                </div>
-                            </div>
-                            <div class="sk-title">
-                                CSS
-                            </div>
-                        </div>
-
-
-                        <div class="skill">
-                            <div class="outer-circle">
-                                <div class="inner-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                        <defs>
-                                            <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                            </linearGradient>
-                                        </defs>
-                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                   </svg>
-                                   <h2 class="counter">
-                                        <span data-target="56">0</span>%
-                                       </h2>
-                                </div>
-                            </div>
-                            <div class="sk-title">
-                                JavaScript
-                            </div>
-                        </div>
-
-
-                        <div class="skill">
-                            <div class="outer-circle">
-                                <div class="inner-circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="180px" height="180px">
-                                        <defs>
-                                            <linearGradient id="GradientColor">
-                                                <stop offset="0%" stop-color="#e91e63" />
-                                                <stop offset="100%" stop-color="#673ab7" />
-                                            </linearGradient>
-                                        </defs>
-                                        <circle cx="85" cy="85" r="75" stroke-linecap="round" />
-                                   </svg>
-                                   <h2 class="counter">
-                                        <span data-target="19">0</span>%
-                                   </h2>
-                                </div>
-                            </div>
-                            <div class="sk-title">
-                                UI/UX Design
-                            </div>
-                        </div>
+                    <div class="skills-icons-grid">
+                        <figure class="skill-icon" aria-label="HTML5">
+                            <i class="devicon-html5-plain"></i>
+                            <figcaption>HTML5</figcaption>
+                        </figure>
+                            <figure class="skill-icon" aria-label="CSS3">
+                            <i class="devicon-css3-plain"></i>
+                        <figcaption>CSS3</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="JavaScript">
+                            <i class="devicon-javascript-plain"></i>
+                            <figcaption>JavaScript</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="PHP">
+                            <i class="devicon-php-plain"></i>
+                            <figcaption>PHP</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="MySQL">
+                            <i class="devicon-mysql-plain"></i>
+                            <figcaption>MySQL</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="Flutter">
+                            <i class="devicon-flutter-plain"></i>
+                            <figcaption>Flutter</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="Dart">
+                            <i class="devicon-dart-plain"></i>
+                            <figcaption>Dart</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="React">
+                            <i class="devicon-react-original"></i>
+                            <figcaption>React</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="Node.js">
+                            <i class="devicon-nodejs-plain"></i>
+                            <figcaption>Node.js</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="Git">
+                            <i class="devicon-git-plain"></i>
+                            <figcaption>Git</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="Figma">
+                            <i class="devicon-figma-plain"></i>
+                            <figcaption>Figma</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="Python">
+                            <i class="devicon-python-plain"></i>
+                            <figcaption>Python</figcaption>
+                        </figure>
+                        <figure class="skill-icon" aria-label="C++">
+                            <i class="devicon-cplusplus-plain"></i>
+                            <figcaption>C++</figcaption>
+                        </figure>
                     </div>
                 </div>
             </div>
         </div>
 
-
         <div class="proposal">
             <div class="text-box">
-                <span>Get It Touch</span>
-                <h3>Have a Project On Your Mind ?</h3>
+                <span>Get In Touch</span>
+                <h3>Have a Project On Your Mind?</h3>
                 <a href="#contact" class="button-link">Contact Me</a>
+            </div>
+
+            <div class="image-box">
+                <img src="./assets/illustrations/idea.svg" alt="Project idea illustration" />
             </div>
         </div>
     </section>
@@ -311,8 +260,10 @@
         <div class="fillter-buttons">
             <button class="active" data-filter="all">All Work</button>
             <button data-filter=".web">Web Development</button>
+            <button data-filter=".mobile">Mobile Development</button>
             <button data-filter=".uiux">UI/UX Design</button>
             <button data-filter=".branding">Branding Design</button>
+            <button data-filter=".other">Other</button>
         </div>
 
         <div class="portfolio-gallery">

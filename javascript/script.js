@@ -23,6 +23,54 @@ var typed = new Typed(".typing-text", {
     backDelay: 500,
 });
 
+// Animated Statistics Counter
+
+document.addEventListener('DOMContentLoaded', () => {
+  const statsSection = document.querySelector('.about-stats');
+  const counters = document.querySelectorAll('.count');
+  let hasAnimated = false;
+
+  const animateCounter = (el) => {
+    const target = parseInt(el.dataset.target);
+    const duration = 2000; // total animation duration in ms
+    const startTime = performance.now();
+
+    const easeOutQuad = (t) => t * (2 - t); // easing function
+
+    const update = (currentTime) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1); // cap at 1
+      const easedProgress = easeOutQuad(progress);
+      const currentValue = Math.round(easedProgress * target);
+
+      el.textContent = `+${currentValue}`;
+
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = `+${target}`; // ensure exact target
+      }
+    };
+
+    requestAnimationFrame(update);
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !hasAnimated) {
+      counters.forEach(animateCounter);
+      hasAnimated = true;
+      observer.disconnect(); // no re-triggering
+    }
+  }, {
+    threshold: 0.4
+  });
+
+  if (statsSection) {
+    observer.observe(statsSection);
+  }
+});
+
+
 // switch between about buttons 
 const buttons = document.querySelectorAll('.about-btn button');
 const contents = document.querySelectorAll('.content');

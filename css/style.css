@@ -400,6 +400,64 @@ section{
     margin-top: 1.5rem;
 }
 
+/* === Stats Counter Section === */
+
+.about-stats {
+  padding: 3rem 1.5rem;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* exactly 2 columns */
+  gap: 2rem 3rem; /* row gap 2rem, column gap 3rem */
+  margin-top: 2rem;
+}
+
+.stat-item {
+  background-color: var(--card-bg, rgba(255, 255, 255, 0.05));
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+}
+
+.stat-item .count {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--accent, #00abf0);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  color: var(--text-light, #aaa);
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr; /* stack vertically on narrow devices */
+    gap: 1.5rem 0;
+  }
+  .about-stats {
+    padding: 2rem 1rem;
+  }
+  .stat-item .count {
+    font-size: 2.4rem;
+  }
+}
+
+
 /* ==================== Services section css code ============================ */
 .services{
     height: 100%;
@@ -756,76 +814,55 @@ contact img{
     margin-bottom: 1rem;
 }
 
-.skill-wrap{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(150px , auto));
+.skills-icons-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
     justify-content: center;
-    grid-gap: 2.5rem;
+    align-items: center;
+    margin-top: 2rem;
 }
-
-.skill{
+.skill-icon {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    width: 90px;
+    transition: transform 0.2s, color 0.2s;
+    cursor: pointer;
 }
-
-.outer-circle{
-    width: 170px;
-    height: 170px;
-    position: relative;
-    margin-bottom: 1rem;
-    padding: 20px;
-    border-radius: 50%;
-    box-shadow: rgba(50,50,93,0.25)0px 6px 12px -2px,
-    rgba(0,0,0,0.3)0px 3px 7px -3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.skill-icon i {
+    font-size: 3rem;
+    color: #00abf0;
+    transition: transform 0.2s, color 0.2s;
 }
-
-.inner-circle{
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    box-shadow: rgba(204,219,232)3px 3px 6px 0px inset,
-    rgba(255,255,255,0.5)-3px -3px 6px 1px inset;
-}
-
-.outer-circle svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.outer-circle svg circle{
-    fill: none;
-    stroke-width: 15px;
-    stroke: url(#GradientColor);
-    stroke-linecap: round;
-    stroke-dasharray: 465;
-    stroke-dashoffset: 464; 
-}
-
-.outer-circle h2.counter{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 1;
-    font-size: .9rem;
-    font-weight: 400;
-}
-
-h2.counter span{
-    font-size: 1.7rem;
-}
-
-.sk-title{
+.skill-icon figcaption {
+    margin-top: 0.5rem;
     font-size: 1rem;
+    color: var(--text-muted, #ffffff);
+    text-align: center;
     font-weight: 500;
+    transition: color 0.3s;
+}
+.skill-icon:hover i {
+    color: #081b29;
+    transform: scale(1.15);
+}
+.skill-icon:hover figcaption {
+    color: #00abf0;
+}
+@media (max-width: 600px) {
+    .skills-icons-grid {
+        gap: 1.2rem;
+    }
+    .skill-icon {
+        width: 70px;
+    }
+    .skill-icon i {
+        font-size: 2.2rem;
+    }
+    .skill-icon figcaption {
+        font-size: 0.9rem;
+    }
 }
 
 /*======================= footer ============================ */
