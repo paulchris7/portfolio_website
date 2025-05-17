@@ -830,6 +830,107 @@ section{
     background: var(--main-color) !important;
 }
 
+#blog- {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+#blog-modal[open] {
+  display: flex;
+}
+
+.blog-modal-content {
+  background: #101820;
+  color: #f1f1f1;
+  max-width: 750px;
+  max-height: 90vh;
+  overflow-y: auto;
+  width: 90%;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  animation: fadeIn 0.3s ease;
+}
+
+.blog-modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  background: transparent;
+  color: #aaa;
+  border: none;
+  cursor: pointer;
+}
+
+.blog-modal-close:hover {
+  color: var(--accent, #00abf0);
+}
+
+.blog-modal-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.blog-meta {
+  font-size: 0.9rem;
+  color: #ccc;
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.blog-cover {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.blog-modal-body {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #eaeaea;
+}
+
+.blog-modal-body p {
+  margin-bottom: 1.2rem;
+}
+
+.blog-modal-footer {
+  margin-top: 2rem;
+  text-align: right;
+}
+
+#copy-blog-link {
+  background: var(--accent, #00abf0);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+#copy-blog-link:hover {
+  background: var(--accent-hover, #0077cc);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
 /* ==================== Contact section css code ============================ */
 
 .contactSkills{

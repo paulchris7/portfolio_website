@@ -1,0 +1,29 @@
+# 🌐 How Websites Are Made
+
+I still remember the first time I built a website.
+
+It wasn’t pretty—far from it. A blinking title, an image that wouldn’t center no matter what I did, and colors that would make any designer cry. But you know what? I was proud. That little page, clunky as it was, marked the beginning of a journey. I didn’t know then just how much that one simple experiment would shape my creativity, my problem-solving skills, and eventually my career.
+
+At the time, I didn’t care that it was messy. I only cared that it worked. I’d type something, hit save, refresh my browser—and suddenly there it was. It felt like cracking a code, or maybe opening a door to a world where I could create anything.
+
+Looking back, I had no idea what was really happening behind the scenes. I was just typing in a text file. But the moment I hit save and opened it in a browser, something magical happened. That browser read my file and turned it into a living, breathing page. I didn’t realize it at the time, but I was stepping into one of the most powerful and accessible creative tools in the world. It was like building something out of thin air, and watching the browser breathe life into it.
+
+The first building block I met was HTML. It was like discovering a new language, one that didn’t require fluency—just curiosity. HTML lays the foundation. It’s the structure of the page, the bones. Imagine writing a letter and deciding where the title should go, where each paragraph begins and ends, and what image to include. That’s what HTML does. It organizes content and tells the browser, “Hey, here’s a heading,” or “This is a link.” It doesn’t care how things look—it just wants everything in the right place.
+
+Eventually, I realized that structure wasn’t enough. I wanted more than just plain black text on a white background. I wanted color, layout, personality. That’s when I stumbled into CSS. Cascading Style Sheets. It sounded technical, but it turned out to be one of the most artistic parts of web creation. CSS was like decorating a room. Suddenly, I could choose colors, fonts, spacing—make things bold or subtle, loud or elegant. It was the first time I saw creativity meet logic in such a harmonious way. A blue title? Easy. A full-screen image with soft shadows and rounded corners? It was just a few lines away. With CSS, the web wasn’t just a space to write—it became a canvas.
+
+But even with that, something felt missing. I wanted to add behavior. I wanted the page to respond—to me, to clicks, to time. Enter JavaScript. It wasn’t love at first sight. JavaScript was trickier. Less about looks, more about brains. But when it worked, it felt like magic. I remember the first time I made a button change a message on the page. It felt small, but it opened a huge door. Suddenly, I could make things move. I could create forms that reacted in real-time, images that changed on hover, games, calculators, and anything in between.
+
+It didn’t all come easily. There were late nights, broken pages, and mysterious browser errors. Times when I thought I’d ruined everything. But each time I solved a bug or finally saw something work, I felt a surge of joy. It was like solving a puzzle only I could see. And with every victory, I grew more confident, more curious, more addicted to the process of making the invisible visible.
+
+What I came to understand is that these three—HTML, CSS, and JavaScript—are the heart of nearly every website you’ve ever visited. They are like layers of a story. HTML tells you what the story is. CSS decides how it's told. JavaScript lets the reader interact with it. Whether it’s a personal blog, an e-commerce platform, a portfolio, or a massive social media network—beneath all the frameworks and libraries and shiny interfaces, these three technologies are still doing the heavy lifting.
+
+The beautiful thing is, you don’t need to be an expert to begin. In fact, it’s better if you’re not. Beginners approach web development with fresh eyes and wild ideas. That’s how I started—with no roadmap, just curiosity, a browser, and a simple text editor. I would stay up way too late, not because I had to, but because I wanted to see what would happen if I changed just one more thing.
+
+Over time, I started understanding more of the invisible forces that power the web. Servers, requests, hosting, domains—terms that once felt intimidating became part of the bigger picture. It was like lifting the curtain and seeing the orchestra behind the stage. The files I wrote weren’t just sitting on my computer anymore—they were being served to people around the world, sometimes instantly, sometimes with glitches. But the fact that someone could type an address, hit Enter, and land on something I built—that still amazes me.
+
+If you’re even a little curious about how it all works, there’s a whole universe waiting for you. And you don’t have to go far to find it. Some of the best places to start include [MDN Web Docs](https://developer.mozilla.org), which breaks everything down with clarity and care; [freeCodeCamp](https://www.freecodecamp.org), which gives you challenges and projects to build as you learn; and [w3schools](https://www.w3schools.com), which is often the first place many of us landed after googling something like “how to make text red in HTML.”
+
+The tools have changed. The designs are better. We now have powerful libraries and frameworks and even AI tools that help speed things up. But that feeling? That first spark? It’s still there for me. Every time I open a new blank file, every time I refresh the page and something new appears, it’s like being a beginner all over again. And honestly, I hope that feeling never fades.
+
+— Christopher

@@ -231,6 +231,90 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// blog modal window
+document.addEventListener('DOMContentLoaded', () => {
+  const blogModal = document.getElementById('blog-modal');
+  const blogTitle = document.getElementById('blog-modal-title');
+  const blogContent = document.getElementById('blog-content');
+  const blogCover = document.getElementById('blog-cover');
+  const blogDate = document.getElementById('blog-date');
+  const blogTags = document.getElementById('blog-tags');
+  const blogReadingTime = document.getElementById('blog-reading-time');
+  const blogClose = document.querySelector('.blog-modal-close');
+  const copyBtn = document.getElementById('copy-blog-link');
+
+  const blogTriggers = document.querySelectorAll('.open-blog-modal');
+
+  blogTriggers.forEach(trigger => {
+    trigger.addEventListener('click', async (e) => {
+      e.preventDefault();
+
+      const file = trigger.dataset.file || 'blog1.txt';
+      const title = trigger.dataset.title || 'Untitled Blog';
+      const cover = trigger.dataset.cover || '';
+      const date = trigger.dataset.date || '';
+      const tags = trigger.dataset.tags || '';
+      const reading = trigger.dataset.reading || '3 min read';
+
+      blogTitle.textContent = title;
+      blogDate.textContent = date;
+      blogTags.textContent = tags;
+      blogReadingTime.textContent = reading;
+
+      // Set cover image if provided
+      if (cover) {
+        blogCover.src = cover;
+        blogCover.style.display = 'block';
+      } else {
+        blogCover.style.display = 'none';
+      }
+
+      try {
+        const response = await fetch(file);
+        if (!response.ok) throw new Error('Failed to load blog file');
+        const text = await response.text();
+
+        // Convert line breaks into HTML
+        blogContent.innerHTML = text
+          .split('\n\n').map(p => `<p>${p.trim()}</p>`).join('');
+
+        blogModal.showModal();
+        document.body.style.overflow = 'hidden';
+      } catch (err) {
+        blogContent.innerHTML = '<p>Error loading blog article.</p>';
+        console.error(err);
+      }
+    });
+  });
+
+  // Close modal
+  const closeBlogModal = () => {
+    blogModal.close();
+    document.body.style.overflow = '';
+  };
+
+  blogClose.addEventListener('click', closeBlogModal);
+  blogModal.addEventListener('click', e => {
+    if (e.target === blogModal) closeBlogModal();
+  });
+  window.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeBlogModal();
+  });
+
+  // Copy blog link
+  copyBtn?.addEventListener('click', () => {
+    navigator.clipboard.writeText(window.location.href + '#blog')
+      .then(() => {
+        copyBtn.textContent = '✅ Copied!';
+        setTimeout(() => copyBtn.textContent = '🔗 Copy Link', 2000);
+      })
+      .catch(() => {
+        copyBtn.textContent = '❌ Failed';
+        setTimeout(() => copyBtn.textContent = '🔗 Copy Link', 2000);
+      });
+  });
+});
+
 // side progress bar 
 let calcScrollValue = ()=>{
     let scrollProgress = document.getElementById("progress");

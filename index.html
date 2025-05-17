@@ -329,95 +329,43 @@
 
         <div class="blog-box swiper mySwiper">
             <div class="cards swiper-wrapper">
-            <!-- Slide 1 -->
-            <div class="card swiper-slide">
-                <div class="card-top">
-                <img src="img/blog/1.jpg" alt="Blog post 1">
+                <!-- Slide 1 : How website are made-->
+                <div class="card swiper-slide">
+                    <div class="card-top">
+                        <img src="assets\img\blog\blog1\analogy.jpg" alt="How Websites Are Made">
+                    </div>
+                    <div class="card-info">
+                        <h2>How Websites Are Made</h2>
+                        <span class="date">Friday, January 5, 2025</span>
+                        <p class="excerpt">
+                            A personal story about discovering how the web really works—from raw HTML to JavaScript magic.
+                        </p>
+                        <button class="button-link open-blog-modal" 
+                            data-file="assets/docs/blog/blog1.txt"
+                            data-title="How Websites Are Made"
+                            data-date="Jan 5, 2025"
+                            data-tags="JavaScript, Web Development, UI/UX"
+                            data-reading="4 min read"
+                            data-cover="assets\img\blog\blog1\analogy.jpg">
+                        Read More
+                        </button>
+                    </div>
                 </div>
-                <div class="card-info">
-                <h2>Mobile App Landing Page</h2>
-                <span class="date">Sunday, Jan 14, 2023</span>
-                <p class="excerpt">
-                    A modern, responsive landing page built with accessibility and clarity in mind.
-                </p>
-                <a href="#" class="button-link">Read More</a>
-                </div>
-            </div>
 
-            <!-- Slide 2 -->
-            <div class="card swiper-slide">
-                <div class="card-top">
-                <img src="img/blog/2.jpg" alt="Blog post 2">
+                <!-- Slide 2 : -->
+                <div class="card swiper-slide">
+                    <div class="card-top">
+                    <img src="img/blog/6.jpg" alt="Blog post 6">
+                    </div>
+                    <div class="card-info">
+                    <h2>Creating Reusable Components</h2>
+                    <span class="date">Saturday, Jun 8, 2023</span>
+                    <p class="excerpt">
+                        How to make your HTML, CSS, and JS code more modular and scalable.
+                    </p>
+                    <a href="#" class="button-link">Read More</a>
+                    </div>
                 </div>
-                <div class="card-info">
-                <h2>Dark Mode Design Tips</h2>
-                <span class="date">Tuesday, Feb 06, 2023</span>
-                <p class="excerpt">
-                    Best practices and design patterns for building smooth dark mode experiences.
-                </p>
-                <a href="#" class="button-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="card swiper-slide">
-                <div class="card-top">
-                <img src="img/blog/3.jpg" alt="Blog post 3">
-                </div>
-                <div class="card-info">
-                <h2>Building a Portfolio</h2>
-                <span class="date">Monday, Mar 11, 2023</span>
-                <p class="excerpt">
-                    How to create a standout portfolio website with animations and modals.
-                </p>
-                <a href="#" class="button-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="card swiper-slide">
-                <div class="card-top">
-                <img src="img/blog/4.jpg" alt="Blog post 4">
-                </div>
-                <div class="card-info">
-                <h2>JavaScript Scroll Effects</h2>
-                <span class="date">Wednesday, Apr 3, 2023</span>
-                <p class="excerpt">
-                    Learn how to build elegant scroll reveal animations with JavaScript and CSS.
-                </p>
-                <a href="#" class="button-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- Slide 5 -->
-            <div class="card swiper-slide">
-                <div class="card-top">
-                <img src="img/blog/5.jpg" alt="Blog post 5">
-                </div>
-                <div class="card-info">
-                <h2>Intro to Swiper.js</h2>
-                <span class="date">Monday, May 15, 2023</span>
-                <p class="excerpt">
-                    Add responsive carousels to your website using the Swiper.js library.
-                </p>
-                <a href="#" class="button-link">Read More</a>
-                </div>
-            </div>
-
-            <!-- Slide 6 -->
-            <div class="card swiper-slide">
-                <div class="card-top">
-                <img src="img/blog/6.jpg" alt="Blog post 6">
-                </div>
-                <div class="card-info">
-                <h2>Creating Reusable Components</h2>
-                <span class="date">Saturday, Jun 8, 2023</span>
-                <p class="excerpt">
-                    How to make your HTML, CSS, and JS code more modular and scalable.
-                </p>
-                <a href="#" class="button-link">Read More</a>
-                </div>
-            </div>
             </div>
 
             <!-- Navigation & Pagination (Scoped) -->
@@ -492,6 +440,33 @@
             </div>
         </div>
     </dialog>
+
+    <dialog id="blog-modal" class="modal" aria-hidden="true">
+        <div class="blog-modal-content">
+            <button class="blog-modal-close" aria-label="Close">&times;</button>
+            <div class="blog-modal-header">
+            <h2 id="blog-modal-title">Blog Title</h2>
+            <div class="blog-meta">
+                <span>🕒 <span id="blog-reading-time">5 min read</span></span>
+                <span>📅 <span id="blog-date">May 17, 2025</span></span>
+                <span>🏷️ <span id="blog-tags">Design, CSS</span></span>
+            </div>
+            </div>
+
+            <!-- Cover image -->
+            <img id="blog-cover" src="assets\img\blog\blog1\analogy.jpg" alt="Illustrative analogy between a website and a house" class="blog-cover" />
+
+            <div class="blog-modal-body" id="blog-content">
+            <!-- Content will be loaded dynamically from blog1.txt -->
+            </div>
+
+            <div class="blog-modal-footer">
+            <button id="copy-blog-link">🔗 Copy Link</button>
+            </div>
+        </div>
+    </dialog>
+
+
 
 
 
