@@ -340,6 +340,7 @@ window.onscroll = calcScrollValue;
 window.onload = calcScrollValue;
 
 
+
 // active menu 
 
 let menuLi = document.querySelectorAll("header ul li a");
