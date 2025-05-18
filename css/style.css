@@ -676,6 +676,7 @@ section{
   max-width: 500px;
   max-height: 95vh;
   width: 90%;
+  overflow-y: auto;
   border-radius: 1rem;
   position: relative;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
