@@ -92,14 +92,71 @@ buttons2.forEach((button, index) => {
     });
 });
 
-var mixer = mixitup('.portfolio-gallery',{
-    selectors: {
-        target: '.portfolio-box'
-    },
-    animation: {
-        duration: 500
+
+document.addEventListener('DOMContentLoaded', () => {
+    function loadBrandingProjects() {
+        const gallery = document.querySelector('.portfolio-gallery');
+        if (!gallery) return;
+
+        const TOTAL_IMAGES = 24;
+        const BASE_PATH = 'assets/img/portfolio/branding/';
+
+        for (let i = 1; i <= TOTAL_IMAGES; i++) {
+            const sizes = ['', '', '', '', 'tall', 'tall', 'wide', 'big'];
+            const randomSize = sizes[Math.floor(Math.random() * sizes.length)];
+
+            const jpgSrc = `${BASE_PATH}${i}.jpg`;
+            const pngSrc = `${BASE_PATH}${i}.png`;
+
+            const projectHtml = `
+                <div class="portfolio-box mix branding ${randomSize}">
+                    <div class="portfolio-img">
+                        <img src="${jpgSrc}"
+                             onclick="openImageModal(this.src)"
+                             onerror="this.onerror=null; this.src='${pngSrc}'; this.onerror=function(){this.closest('.portfolio-box').remove();}"
+                             alt="Branding project image ${i}">
+                    </div>
+                </div>
+            `;
+            gallery.insertAdjacentHTML('beforeend', projectHtml);
+        }
     }
+
+    loadBrandingProjects();
+
+    var mixer = mixitup('.portfolio-gallery', {
+        selectors: {
+            target: '.portfolio-box'
+        },
+        animation: {
+            duration: 500
+        }
+    });
+
+    // Image Modal Logic
+    const imageModal = document.getElementById('image-modal');
+    const modalImage = imageModal.querySelector('img');
+    const imageModalCloseBtn = imageModal.querySelector('.modal-close');
+
+    window.openImageModal = function(src) {
+        modalImage.src = src;
+        imageModal.showModal();
+        document.body.style.overflow = 'hidden';
+    }
+
+    const closeImageModal = () => {
+        imageModal.close();
+        document.body.style.overflow = '';
+    };
+
+    imageModalCloseBtn.addEventListener('click', closeImageModal);
+    imageModal.addEventListener('click', e => {
+        if (e.target === imageModal) {
+            closeImageModal();
+        }
+    });
 });
+
 
 // modal portfolio window
 document.addEventListener('DOMContentLoaded', () => {
